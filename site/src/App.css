@@ -1,0 +1,67 @@
+body {
+  overscroll-behavior: none;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 150%;
+  background: linear-gradient(to top right, #000000, #310321);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 20px;
+  margin: 20px; /* Add space between the card and the surrounding content */
+  max-width: 600px;
+  width: 90%; /* Make the card responsive */
+}
+.bkg{
+  background-color: blue;
+}
+.carouselka{
+  margin-top: 20%;
+}
+.Title{
+  color: white;
+  font-weight: bold;
+  margin-top: 20%;
+}
+.App-header {
+  background-size: cover;
+  background-position: center; 
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this to center horizontally */
+  font-size: calc(10px + 2vmin);
+}
+.justtext {
+  color:white;
+  font-size: 20;
+}
+/* .crlitem{
+  width: 100%; 
+  height: 300px; 
+  overflow: hidden; 
+  position: relative; 
+} */
+  /* .navbar {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    background-color: #282c34; 
+    padding: 10px 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 1000; 
+  } */
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
