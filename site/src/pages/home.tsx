@@ -5,15 +5,16 @@ import { ConsoleHeader } from '../components/consoleheader';
 import me from "../assets/me.jpg"
 import { motion } from "motion/react"
 import { Link,useNavigate } from 'react-router-dom';
+
 export const Home = ()=>{
     const navigate = useNavigate();
     const handleButtonClick = () => {
       navigate('/projects');
   };
     return (
-        <div>
+        <div className='backgroundGreen'>
             <ConsoleHeader />
-            <div style={{ display: "flex", flexDirection: "column", alignItems:"center", width: "100%"}}>
+            <div className='centeredContainer'>
 
                 <TypingText className='justtext' styles={{ margin: "0 auto", display: "block", marginTop:"5%"}} speed={30}>
                     Welcome to my page!
@@ -25,8 +26,7 @@ export const Home = ()=>{
                 <motion.div 
                     style={{ marginTop: "5%", objectFit: "contain" }} 
                     initial={{ scale: 0 }} 
-                    whileInView={{ scale: 1 }}
-                    >
+                    whileInView={{ scale: 1 }}>
                     <img 
                         height={400} 
                         width="auto" 

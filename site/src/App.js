@@ -12,14 +12,12 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <Navik />
-        <header className="App-header">
         <Routes>
             <Route path="/" element={<Home></Home>} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/sonder" element = {<Sonder />}/>
         </Routes>
-        </header>
       </div>
     </BrowserRouter>
   );
