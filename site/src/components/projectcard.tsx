@@ -1,26 +1,64 @@
-
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import icon from '../assets/icon.png'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import React from 'react'; // Import React to fix the error//+
-export const ProjectCard: React.FC<{images: string;title: string; text:string}> = ({ images, title, text }) => {
+
+export const ProjectCard: React.FC<{images: string; title: string; text: string; link: string;}> = ({ images, title, text, link }) => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
-    navigate('/projects/sonder');
-};
+    navigate(link);
+  };
 
   return (
-    <Card bg="dark" style={{ width: '30rem', height:'50rem'}}>
-      <Card.Img src={icon}/>
-      <Card.Body>
-        <Card.Title style = {{color:"white" }} >{title}</Card.Title>
-        <Card.Text style={{color:"white" }}>
-          {text}
-        </Card.Text>
-        <Button onClick={handleButtonClick} variant="primary">Read more</Button>
-      </Card.Body>
-    </Card>
+    <div style={cardStyle}>
+      <img src={images} alt={title} style={imageStyle} />
+      <div style={bodyStyle}>
+        <h3 style={titleStyle}>{title}</h3>
+        <p style={textStyle}>{text}</p>
+        <button onClick={handleButtonClick} style={buttonStyle}>Read more</button>
+      </div>
+    </div>
   );
 }
 
+const cardStyle: React.CSSProperties = {
+  width: '25vw',
+  backgroundColor: "rgba(45,45,45,0.4)",
+  color: 'white',
+  height:"75vh",
+  borderRadius: '8px',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  overflow: 'hidden',
+  margin: '20px',
+
+};
+
+const imageStyle: React.CSSProperties = {
+  width: '100%',
+  height: '150px',
+  objectFit: 'cover',
+};
+
+const bodyStyle: React.CSSProperties = {
+  padding: '15px',
+};
+
+const titleStyle: React.CSSProperties = {
+  margin: '0 0 10px 0',
+  fontFamily:"Safton",
+
+};
+
+const textStyle: React.CSSProperties = {
+  margin: '0 0 15px 0',
+  fontFamily:"Safton",
+};
+
+const buttonStyle: React.CSSProperties = {
+  backgroundColor: 'rgba(45,45,45,0.5)',
+  color: 'white',
+  border: 'none',
+  padding: '10px 20px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  fontFamily:"Safton",
+
+};

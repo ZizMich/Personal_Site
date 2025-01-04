@@ -7,18 +7,18 @@ import Navik from "./components/navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Sonder} from "./pages/projects_description/sonder"
 import {Home} from "./pages/home"
+import {Tgbot} from "./pages/projects_description/tgbot"
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
       <Navik />
-        <Routes>
+      <Routes>
             <Route path="/" element={<Home></Home>} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/sonder" element = {<Sonder />}/>
+            <Route path="/projects/tgbot" element = {<Tgbot/>}/>
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }

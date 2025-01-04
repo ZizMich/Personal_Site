@@ -13,7 +13,7 @@ export const ConsoleHeader = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const letters = 'ㅁ캬큐다 혀ㅣㅐㅡㅐㅍㅂㅈㄷㄱ쇼ㅕㅑㅐㅔㅁㄴㅇㄹ호ㅓㅏㅣㅋㅌㅊ퓨ㅜㅡ';
+    const letters = '01';
     //const letters = '01';
 
     const fontSize = 16;
@@ -21,9 +21,9 @@ export const ConsoleHeader = () => {
     const drops: number[] = Array(Math.floor(columns)).fill(333);
 
     const draw = () => {
-      context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      context.fillStyle = 'rgba(0, 0, 0, 0.2)';
       context.fillRect(0, 0, canvas.width, canvas.height);
-
+      
       context.fillStyle = '#0F0';
       context.font = `${fontSize}px monospace`;
 

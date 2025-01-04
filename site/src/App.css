@@ -5,13 +5,48 @@ body {
   margin: 0;
   padding: 0;
   height: 150%;
+
+}
+@font-face {
+  font-family: 'Ebbe';
+  src: url("./fonts/Ebbe_Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Safton';
+  src: url("./fonts/safton.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 .backgroundGreen{
-  background: linear-gradient(to bottom, #000000, #021c07);
+  background: linear-gradient(to bottom, #000000, #010f04);
+  top:0;
+  z-index: -10;
+
 }
 .backgroundPuprle{
+  height:auto;
+  padding-top: 5%;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(to bottom, #000000, #3a0736);
-
+}
+.backgroundBlue{
+  background: linear-gradient(to bottom, #000000, #07263a);
+}
+.navik{
+  
+  background-color:#111;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .card {
   border-radius: 10px;
@@ -25,12 +60,14 @@ body {
   background-color: blue;
 }
 .carouselka{
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .Title{
   color: white;
   font-weight: bold;
-  margin-top: 20%;
+  margin-top: 10%;
+  font-size: 2rem;
+  font-family: "Safton";
 }
 .App-header {
   background-size: cover;
@@ -46,8 +83,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 5%;
+  flex-wrap: wrap;
 }
+
 .centeredContainer{
   display: flex;
   flex-direction: column;
@@ -55,25 +94,47 @@ body {
   width: 100%;
 
 }
+
+@font-face {
+  font-family: 'Deter';
+  src: url("./fonts/determination_monorus_by_lyajk.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.ascii-button {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  font-family:"Deter";
+  color:rgb(42, 215, 42);
+  padding: 5px;
+  text-align: center;
+}
 .justtext {
   color:rgb(42, 215, 42);
-  font-family: 'Consolas', 'Courier New', monospace;
-  font-size: 20;
+  /* font-family: 'Consolas', 'Courier New', monospace; */
+  font-size: 1.2rem;
   margin-left: 10%;
+  font-family:"Deter";
+
   margin-right: 10%;
 }
-
 .justtext1 {
   color:rgb(240, 240, 240);
   margin-left: 10%;
   margin-right: 10%;
-  font-size: 20;
+  font-size: 1.2rem;
+  font-family: "Safton";
 }
 .console canvas {
+  flex: 1;
   width: 100%; /* Set desired width */
-  height: 40vh; /* Set desired height */
+  height: 50vh; /* Set desired height */
+  background-color: rbga(255,255,255,0);
 }
-
+#cardbkg{
+  background-color: rgba(33, 33, 33, 1);
+}
 .centeredText{
    margin: "0 auto";
     display: "block";
