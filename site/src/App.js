@@ -11,6 +11,11 @@ import {Tgbot} from "./pages/projects_description/tgbot"
 function App() {
   return (
     <BrowserRouter>
+      <head>
+          <link rel="icon" href="https://t2.eventshock.ru/favicon.ico"/>
+          <title> Azizbek Gulomov</title>
+
+     </head>
       <Navik />
       <Routes>
             <Route path="/" element={<Home></Home>} />
