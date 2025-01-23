@@ -19,8 +19,13 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.backgroundGreen{
-  background: linear-gradient(to bottom, #000000, #010f04);
+.backgroundBlack{
+  background: #000000;
+
+
+}
+.backgroundGray{
+  background: linear-gradient(to bottom, #000000, #1b1b1b);
   top:0;
   z-index: -10;
 
@@ -146,4 +151,29 @@ body {
   color: #61dafb;
 }
 
+.projButton{
+  background-color: rgba(45,45,45,0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family:"Safton";
+}
+/* .projButton:hover{
+  background-color: 'rgba(255,255,255,0.5)';
 
+} */
+
+.tv-noise {
+  position: fixed; /* Position it relative to the viewport */
+  top: 0;          /* Align to the top of the viewport */
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* background-color: white; */
+  background: url('./assets/tv.gif') repeat;
+  z-index: 1000000;
+  /* display: none; */
+}

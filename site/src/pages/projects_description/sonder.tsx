@@ -197,7 +197,7 @@ export const Sonder = () => {
           onclick={() => handlePush('apn')}
         />
       </div>
-      <div className="centeredContainer">
+      {/* <div className="centeredContainer">
         <TypingText
           className="justtext1"
           styles={{ marginTop: '5%' }}
@@ -205,7 +205,7 @@ export const Sonder = () => {
         >
           More details you can read in the documentation.
         </TypingText>
-      </div>
+      </div> */}
     </div>
   );
 };

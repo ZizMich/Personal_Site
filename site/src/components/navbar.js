@@ -9,8 +9,8 @@ export default function Navik() {
                 </div>
                 <div style={styles.navLinks}>
                     <Link to="/projects" style={styles.link}>Projects</Link>
-                    <Link to="/contacts" style={styles.link}>Contacts</Link>
-                    <Link to="/language" style={styles.link}>Language</Link>
+                    {/* <Link to="/contacts" style={styles.link}>Contacts</Link>
+                    <Link to="/language" style={styles.link}>Language</Link> */}
                 </div>
             </div>
         </nav>

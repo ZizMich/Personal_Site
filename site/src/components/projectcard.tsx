@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
 export const ProjectCard: React.FC<{images: string; title: string; text: string; link: string;}> = ({ images, title, text, link }) => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
@@ -13,7 +12,7 @@ export const ProjectCard: React.FC<{images: string; title: string; text: string;
       <div style={bodyStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={textStyle}>{text}</p>
-        <button onClick={handleButtonClick} style={buttonStyle}>Read more</button>
+        <button onClick={handleButtonClick} className='projButton'>Read more</button>
       </div>
     </div>
   );
@@ -33,7 +32,7 @@ const cardStyle: React.CSSProperties = {
 
 const imageStyle: React.CSSProperties = {
   width: '100%',
-  height: '150px',
+  height: '50%',
   objectFit: 'cover',
 };
 
@@ -52,13 +51,3 @@ const textStyle: React.CSSProperties = {
   fontFamily:"Safton",
 };
 
-const buttonStyle: React.CSSProperties = {
-  backgroundColor: 'rgba(45,45,45,0.5)',
-  color: 'white',
-  border: 'none',
-  padding: '10px 20px',
-  borderRadius: '4px',
-  cursor: 'pointer',
-  fontFamily:"Safton",
-
-};

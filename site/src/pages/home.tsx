@@ -15,7 +15,7 @@ export const Home = () => {
   };
   return (
   <div className="crt">
-    <div className="backgroundGreen">
+    <div className="backgroundBlack">
       <ConsoleHeader />
       <div className="centeredContainer">
         <TypingText
@@ -51,6 +51,7 @@ export const Home = () => {
           className="justtext"
           styles={{ textAlign: 'center', marginTop: '5%' }}
           speed={10}
+          
         >
           I specialize in programming languages such as Java, JavaScript,
           TypeScript, and Python. My experience includes developing software
