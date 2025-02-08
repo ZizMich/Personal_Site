@@ -75,7 +75,7 @@ export const Sonder = () => {
             break;
         case 'apn':
                 setBEdescription(
-                  'Apple Ntification Service is used for sending notifications to the user who use IOS devices.'
+                  'Apple Notification Service is used for sending notifications to the user who use IOS devices.'
                 );
             break;
         case 'postgress':

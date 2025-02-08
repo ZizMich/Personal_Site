@@ -91,6 +91,7 @@ export const Tgbot = () => {
           title="Aiogram"
           onclick={() => handleClick('aiogram')}
         />
+        <div style={{marginTop:"5%"}}></div>
       </div>
     </div>
   );

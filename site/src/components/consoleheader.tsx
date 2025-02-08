@@ -14,7 +14,6 @@ export const ConsoleHeader = () => {
     canvas.height = window.innerHeight;
 
     const letters = '01';
-    //const letters = '01';
 
     const fontSize = 16;
     const columns = canvas.width / fontSize;

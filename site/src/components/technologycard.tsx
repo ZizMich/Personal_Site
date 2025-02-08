@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-
+import { useRef } from 'react';
 export const TechnologyCard: React.FC<{
   image: string;
   title: string;
   onclick: Function;
 }> = ({ image, title, onclick }) => {
   const [isDark, setIsDark] = useState(false);
-
+  const reference = useRef(null);
   const handleClick = () => {
     setIsDark(true);
     onclick();
@@ -21,12 +21,15 @@ export const TechnologyCard: React.FC<{
         backgroundColor: isDark ? 'rgba(0, 0, 0, 0.5)' : 'transparent', // Darken the background
         transition: 'background-color 0.3s ease', // Smooth transition
       }}
-      initial={{ scale: 0 }}
+      ref={reference}
       onMouseDown={handleClick}
       onMouseUp={() => setIsDark(false)}
-      whileInView={{ scale: 1 }}
+      whileInView={{ rotate:360 }}
+      whileHover={{scale:1.2}}
+      whileTap={{scale:0.8}}
     >
       <img
+        
         height="100rem"
         width="auto"
         src={image}

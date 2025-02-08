@@ -178,9 +178,10 @@ export const Vpn = () => {
         <TechnologyCard
           image={openvpn}
           title="OpenVPN"
-          onclick={() => handlePush('opnevpn')}
+          onclick={() => handlePush('openvpn')}
         />
       </div>
+      
     </div>
   );
 };
