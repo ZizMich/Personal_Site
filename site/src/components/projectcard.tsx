@@ -1,6 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-export const ProjectCard: React.FC<{images: string; title: string; text: string; link: string;}> = ({ images, title, text, link }) => {
+export const ProjectCard: React.FC<{
+  images: string;
+  title: string;
+  text: string;
+  link: string;
+}> = ({ images, title, text, link }) => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
     navigate(link);
@@ -12,22 +17,23 @@ export const ProjectCard: React.FC<{images: string; title: string; text: string;
       <div style={bodyStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={textStyle}>{text}</p>
-        <button onClick={handleButtonClick} className='projButton'>Read more</button>
+        <button onClick={handleButtonClick} className="projButton">
+          Read more
+        </button>
       </div>
     </div>
   );
-}
+};
 
 const cardStyle: React.CSSProperties = {
-  width: '25vw',
-  backgroundColor: "rgba(45,45,45,0.4)",
+  width: '25em',
+  backgroundColor: 'rgba(45,45,45,0.4)',
   color: 'white',
-  height:"75vh",
+  height: '40em',
   borderRadius: '8px',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
   overflow: 'hidden',
   margin: '20px',
-
 };
 
 const imageStyle: React.CSSProperties = {
@@ -42,12 +48,10 @@ const bodyStyle: React.CSSProperties = {
 
 const titleStyle: React.CSSProperties = {
   margin: '0 0 10px 0',
-  fontFamily:"Safton",
-
+  fontFamily: 'Safton',
 };
 
 const textStyle: React.CSSProperties = {
   margin: '0 0 15px 0',
-  fontFamily:"Safton",
+  fontFamily: 'Safton',
 };
-
