@@ -2,11 +2,13 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { TypingText } from '../components/typingtext';
 import { ConsoleHeader } from '../components/consoleheader';
-import me from '../assets/me.jpg';
+import me1 from '../assets/me.jpg';
 import { motion } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AsciiButton } from '../components/ascii';
 import "../crt.css"
+import {me} from "../assets/asciiarts";
+import RetroLoadingAnimation from "../components/retroLoadingAnim";
 export const Home = () => {
 
   const navigate = useNavigate();
@@ -34,19 +36,10 @@ export const Home = () => {
           student pursuing a Bachelor's degree in Computer Science.
         </TypingText>
 
-        <motion.div
-          style={{ marginTop: '5%', objectFit: 'contain' }}
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-        >
-          <img
-            height={400}
-            width="auto"
-            src={me}
-            alt="me"
-            style={{ borderRadius: '15px' }}
-          />
-        </motion.div>
+        <RetroLoadingAnimation 
+        asciiArt={me}
+        imageSrc={me1}
+      />
         <TypingText
           className="justtext"
           styles={{ textAlign: 'center', marginTop: '5%' }}
@@ -72,7 +65,7 @@ export const Home = () => {
         </TypingText>
         <AsciiButton
           onclick={handleButtonClick}
-          label="go to projects!"
+          label=" go to projects! "
         ></AsciiButton>
       </div>
     </div>

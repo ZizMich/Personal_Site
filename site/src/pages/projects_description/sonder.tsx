@@ -101,14 +101,14 @@ export const Sonder = () => {
     { src: photo3, caption: '' },
   ];
   return (
-    <div className="backgroundPuprle">
+    <div className="backgroundBlack">
       <div className="centeredContainer">
         <Carouselka images={images} width={300} className="carouselka" />
         <TypingText className="Title" speed={30}>
           Sonder
         </TypingText>
         <TypingText
-          className="justtext1"
+          className="justtext"
           styles={{ marginTop: '5%' }}
           speed={10}
         >
@@ -125,7 +125,7 @@ export const Sonder = () => {
         <TypingText className="Title" speed={10}>
           Front end
         </TypingText>
-        <TypingText className="justtext1" speed={10}>
+        <TypingText className="justtext" speed={10}>
           {description}
         </TypingText>
       </div>
@@ -166,7 +166,7 @@ export const Sonder = () => {
         <TypingText className="Title" speed={10}>
           Back end
         </TypingText>
-        <TypingText className="justtext1" speed={10}>
+        <TypingText className="justtext" speed={10}>
           {BEdescription}
         </TypingText>
       </div>

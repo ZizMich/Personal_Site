@@ -19,13 +19,15 @@ export default function Navik() {
 
 const styles = {
     navbar: {
-        backgroundColor: "rgba(45,45,45,0.5)", // Dark background
+        backgroundColor: "rgb(0, 0, 0)", // Dark background
+        borderBottom: '3px dashed green',
+
         padding: '10px 20px',
         position: 'fixed',
         zIndex:1000,
         top: 0,
         width: '100%',
-        backdropFilter: 'blur(10px)',
+        //backdropFilter: 'blur(10px)',
     },
     container: {
         display: 'flex',

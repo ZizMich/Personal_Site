@@ -36,7 +36,7 @@ export const TechnologyCard: React.FC<{
         alt="me"
         style={{ borderRadius: '15px' }}
       />
-      <p className="justtext1">{title}</p>
+      <p className="justtext">{title}</p>
     </motion.div>
   );
 };

@@ -2,8 +2,15 @@ import React, { useState, useEffect, ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const TvNoiseTransition: React.FC = () => {
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   const location = useLocation();
+
+  // useEffect(() => {
+  //   setIsTransitioning(true);
+  //   const timer = setTimeout(() => {
+  //     setIsTransitioning(false);
+  //   }, 50);
+  // })
 
   useEffect(() => {
     setIsTransitioning(true);

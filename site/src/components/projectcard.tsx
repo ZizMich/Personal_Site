@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AsciiButton } from './ascii';
+import RetroLoadingAnimation from './retroLoadingAnim';
 export const ProjectCard: React.FC<{
   images: string;
   title: string;
   text: string;
   link: string;
-}> = ({ images, title, text, link }) => {
+  ascii: string;
+}> = ({ images, title, text, link, ascii }) => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
     navigate(link);
@@ -14,11 +16,15 @@ export const ProjectCard: React.FC<{
 
   return (
     <div style={cardStyle}>
-      <img src={images} alt={title} style={imageStyle} />
+      <RetroLoadingAnimation asciiArt={ascii} imageSrc={images} />
       <div style={bodyStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={textStyle}>{text}</p>
-        <AsciiButton onclick={handleButtonClick} label = {"   read more   "}></AsciiButton>
+
+        <AsciiButton
+          onclick={handleButtonClick}
+          label={'    read more    '}
+        ></AsciiButton>
       </div>
     </div>
   );
@@ -26,11 +32,12 @@ export const ProjectCard: React.FC<{
 
 const cardStyle: React.CSSProperties = {
   width: '25em',
+  textAlign: 'center',
   backgroundColor: 'rgb(0, 0, 0)',
   color: 'green',
   height: '40em',
-  border: '2px dashed green',
-  borderRadius: '10px',
+  border: '3px dotted green',
+  borderRadius: '3px',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
   overflow: 'hidden',
   margin: '20px',
@@ -47,7 +54,7 @@ const bodyStyle: React.CSSProperties = {
 };
 
 const titleStyle: React.CSSProperties = {
-  color: "green",
+  color: 'green',
   margin: '0 0 10px 0',
   fontFamily: 'Deter',
 };

@@ -119,8 +119,7 @@ body {
   user-select: none;
   font-family:"Deter";
   color:rgb(42, 215, 42);
-  padding: 5px;
-  text-align: center;
+
 }
 .justtext {
   color:rgb(42, 215, 42);
@@ -184,3 +183,45 @@ body {
   z-index: 1000000;
   /* display: none; */
 }
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ascii {
+  position: absolute;
+  color: #33ff33;
+  font-family: monospace;
+  white-space: pre;
+  z-index: 1;
+  font-size: 14px;
+  line-height: 14px;
+  /* width: 500px;
+  height: 500px; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.image {
+  transition: clip-path 0.1s linear;
+  z-index: 2; 
+}
+
+.image img {
+  /* transform: scale(1, 1);  */
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+
+  /* object-fit: cover;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  border-radius: 5px; */
+} 
