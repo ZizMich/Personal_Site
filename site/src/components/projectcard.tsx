@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AsciiButton } from './ascii';
 export const ProjectCard: React.FC<{
   images: string;
   title: string;
@@ -17,9 +18,7 @@ export const ProjectCard: React.FC<{
       <div style={bodyStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={textStyle}>{text}</p>
-        <button onClick={handleButtonClick} className="projButton">
-          Read more
-        </button>
+        <AsciiButton onclick={handleButtonClick} label = {"   read more   "}></AsciiButton>
       </div>
     </div>
   );
@@ -27,10 +26,11 @@ export const ProjectCard: React.FC<{
 
 const cardStyle: React.CSSProperties = {
   width: '25em',
-  backgroundColor: 'rgba(45,45,45,0.4)',
-  color: 'white',
+  backgroundColor: 'rgb(0, 0, 0)',
+  color: 'green',
   height: '40em',
-  borderRadius: '8px',
+  border: '2px dashed green',
+  borderRadius: '10px',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
   overflow: 'hidden',
   margin: '20px',
@@ -47,11 +47,12 @@ const bodyStyle: React.CSSProperties = {
 };
 
 const titleStyle: React.CSSProperties = {
+  color: "green",
   margin: '0 0 10px 0',
-  fontFamily: 'Safton',
+  fontFamily: 'Deter',
 };
 
 const textStyle: React.CSSProperties = {
   margin: '0 0 15px 0',
-  fontFamily: 'Safton',
+  fontFamily: 'Deter',
 };

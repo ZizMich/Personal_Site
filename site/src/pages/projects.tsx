@@ -8,7 +8,7 @@ import icon from "../assets/icon.png"
 import vpn from "../assets/vpn.png"
 export const Projects = ()=>{
     return (
-    <div className='backgroundGray'>
+    <div className='backgroundBlack'>
     <Container>
         <Row>
           <Col xs sm ><ProjectCard images={icon} title="Sonder" text="A mobile app developed in React Native that encourages poeple to go outside and meet other people in person." link="sonder"/></Col>

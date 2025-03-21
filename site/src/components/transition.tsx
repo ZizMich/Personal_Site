@@ -6,10 +6,8 @@ const TvNoiseTransition: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log("change");
     setIsTransitioning(true);
     const timer = setTimeout(() => {
-      console.log("transition complete");
       setIsTransitioning(false);
     }, 200);
 
