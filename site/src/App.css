@@ -75,11 +75,11 @@ body {
   margin-top: 10%;
 }
 .Title{
-  color: white;
+  color: rgb(0, 255, 0);
   font-weight: bold;
   margin-top: 10%;
   font-size: 2rem;
-  font-family: "Safton";
+  font-family: "Deter";
 }
 .App-header {
   background-size: cover;
@@ -135,7 +135,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 1.2rem;
-  font-family: "Safton";
+  font-family: "Deter";
 }
 .console canvas {
   flex: 1;

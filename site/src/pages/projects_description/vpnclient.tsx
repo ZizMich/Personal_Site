@@ -19,7 +19,7 @@ import html from '../../assets/technologies/html.png';
 import css from '../../assets/technologies/css.png';
 import django from '../../assets/technologies/django.png';
 import openvpn from '../../assets/technologies/openvpn.png';
-
+import { vpn } from '../../assets/asciiarts';
 import { Container } from 'react-bootstrap';
 import { useState } from 'react';
 export const Vpn = () => {
@@ -100,9 +100,10 @@ export const Vpn = () => {
     { src: vpn8, caption: '' },
   ];
   return (
-    <div className="backgroundGray">
+    <div className="backgroundBlack">
+      <div className="crt">
       <div className="centeredContainer">
-        <Carouselka images={images} width={300} className="carouselka" />
+        <Carouselka images={images} width={300} className="carouselka" ascii={vpn}/>
         <TypingText className="Title" speed={30}>
           ZetaVPN
         </TypingText>
@@ -181,7 +182,7 @@ export const Vpn = () => {
           onclick={() => handlePush('openvpn')}
         />
       </div>
-      
+      </div>
     </div>
   );
 };

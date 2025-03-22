@@ -4,9 +4,11 @@ import React from 'react';
 const RetroLoadingAnimation = ({
   asciiArt,
   imageSrc,
+  callback,
 }: {
   asciiArt: string;
   imageSrc: string;
+  callback?: () => void;
 }) => {
   const [asciiVisible, setAsciiVisible] = useState(true);
   const [asciiProgress, setAsciiProgress] = useState(0);
@@ -39,18 +41,23 @@ const RetroLoadingAnimation = ({
           setImageProgress((prev) => {
             if (prev >= 100) {
               clearInterval(imageInterval);
+              if (callback){
+                callback()
+                };
               setTimeout(() => setAsciiVisible(false), 1000);
               return prev;
             }
             return prev + 1;
           });
         }, 30);
+ 
       },
       asciiArt.length * 10 + 500
     );
 
     return () => {
-      clearInterval(asciiInterval);
+      clearInterval(asciiInterval)
+
     };
   }, [asciiArt]);
 

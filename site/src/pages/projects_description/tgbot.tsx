@@ -8,7 +8,7 @@ import python from '../../assets/technologies/python.png';
 import sqlite from '../../assets/technologies/sqlite.png';
 import aiogram from '../../assets/technologies/aiogram.png';
 import { useState } from 'react';
-
+import { telega_preview } from '../../assets/asciiarts';
 export const Tgbot = () => {
   const [description, setDescription] = useState('click on icons!');
   const images = [
@@ -40,9 +40,10 @@ export const Tgbot = () => {
     }
   };
   return (
-    <div className="backgroundBlue">
+    <div className="backgroundBlack">
+      <div className="crt">
       <div style={{ padding: '5%' }} className="centeredContainer">
-        <Carouselka width={300} images={images} />
+        <Carouselka width={300} images={images} ascii={telega_preview} />
         <TypingText
           className="Title"
           styles={{ margin: '0 auto', display: 'block', marginTop: '5%' }}
@@ -53,7 +54,7 @@ export const Tgbot = () => {
       </div>
       <div className="centeredContainer">
         <TypingText
-          className="justtext1"
+          className="justtext"
           styles={{ textAlign: 'center', marginTop: '5%' }}
           speed={2}
         >
@@ -71,7 +72,7 @@ export const Tgbot = () => {
         <TypingText speed={2} className="Title">
           Technologies
         </TypingText>
-        <TypingText speed={2} className="justtext1">
+        <TypingText speed={2} className="justtext">
           {description}
         </TypingText>
       </div>
@@ -92,6 +93,7 @@ export const Tgbot = () => {
           onclick={() => handleClick('aiogram')}
         />
         <div style={{marginTop:"5%"}}></div>
+      </div>
       </div>
     </div>
   );

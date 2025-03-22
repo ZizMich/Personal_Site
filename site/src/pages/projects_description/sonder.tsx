@@ -17,6 +17,7 @@ import apple from '../../assets/technologies/apple.png';
 import html from '../../assets/technologies/html.png';
 import css from '../../assets/technologies/css.png';
 import { Container } from 'react-bootstrap';
+import { sonder_preview } from '../../assets/asciiarts';
 import { useState } from 'react';
 export const Sonder = () => {
   const [description, setDescription] = useState("click on icons!");
@@ -102,8 +103,9 @@ export const Sonder = () => {
   ];
   return (
     <div className="backgroundBlack">
+      <div className="crt">
       <div className="centeredContainer">
-        <Carouselka images={images} width={300} className="carouselka" />
+        <Carouselka images={images} width={300} className="carouselka" ascii={sonder_preview} />
         <TypingText className="Title" speed={30}>
           Sonder
         </TypingText>
@@ -206,6 +208,7 @@ export const Sonder = () => {
           More details you can read in the documentation.
         </TypingText>
       </div> */}
+      </div>
     </div>
   );
 };

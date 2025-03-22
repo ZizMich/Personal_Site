@@ -24,7 +24,6 @@ export const TechnologyCard: React.FC<{
       ref={reference}
       onMouseDown={handleClick}
       onMouseUp={() => setIsDark(false)}
-      whileInView={{ rotate:360 }}
       whileHover={{scale:1.2}}
       whileTap={{scale:0.8}}
     >
