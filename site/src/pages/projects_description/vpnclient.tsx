@@ -20,7 +20,6 @@ import css from '../../assets/technologies/css.png';
 import django from '../../assets/technologies/django.png';
 import openvpn from '../../assets/technologies/openvpn.png';
 import { vpn } from '../../assets/asciiarts';
-import { Container } from 'react-bootstrap';
 import { useState } from 'react';
 export const Vpn = () => {
   const [description, setDescription] = useState('click on icons!');

@@ -17,6 +17,8 @@ export const Projects = ()=>{
           <Col xs sm ><ProjectCard images={icon} title="Sonder" text="A mobile app developed in React Native that encourages poeple to go outside and meet other people in person." link="sonder" ascii ={sonder} /></Col>
           <Col xs sm><ProjectCard images={tgbotik} title="Collage Bot" text="A telegram bot that is dedicated to solve an actual bussiness problem of a retail store." link = "tgbot" ascii = {telega}/></Col>
           <Col xs sm><ProjectCard images={vpn} title="Vpn app" text="a fully functioning vpn service" link = "vpn" ascii ={zeta} /></Col>
+          <Col xs sm><ProjectCard  title="this website" text="" link = "thiswebsite" ascii ={"this website"} /></Col>
+
         </Row>
       </Container>
     </div>

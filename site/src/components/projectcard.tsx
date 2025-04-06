@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AsciiButton } from './ascii';
 import RetroLoadingAnimation from './retroLoadingAnim';
 export const ProjectCard: React.FC<{
-  images: string;
+  images?: string;
   title: string;
   text: string;
   link: string;
@@ -16,7 +16,9 @@ export const ProjectCard: React.FC<{
 
   return (
     <div style={cardStyle}>
-      <RetroLoadingAnimation asciiArt={ascii} imageSrc={images} />
+      {  images ? (
+      <RetroLoadingAnimation asciiArt={ascii} imageSrc={images} />) : <div style={{height:"50%", alignContent:"center"}}></div>
+      }
       <div style={bodyStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={textStyle}>{text}</p>
