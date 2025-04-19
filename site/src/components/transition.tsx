@@ -23,7 +23,7 @@ const TvNoiseTransition: React.FC = () => {
           });
         }, 15);
       },
-      500
+      250
     );
     
 
