@@ -207,6 +207,9 @@ body {
   justify-content: center;
   text-align: center;
 }
+.ascii::-webkit-scrollbar {
+  display: none;
+}
 
 .image {
   transition: clip-path 0.1s linear;

@@ -9,6 +9,8 @@ import sqlite from '../../assets/technologies/sqlite.png';
 import aiogram from '../../assets/technologies/aiogram.png';
 import { useState } from 'react';
 import { telega_preview } from '../../assets/asciiarts';
+import { AsciiButton } from '../../components/ascii';
+
 export const Tgbot = () => {
   const [description, setDescription] = useState('click on icons!');
   const images = [
@@ -42,58 +44,67 @@ export const Tgbot = () => {
   return (
     <div className="backgroundBlack">
       <div className="crt">
-      <div style={{ padding: '5%' }} className="centeredContainer">
-        <Carouselka width={300} images={images} ascii={telega_preview} />
-        <TypingText
-          className="Title"
-          styles={{ margin: '0 auto', display: 'block', marginTop: '5%' }}
-          speed={30}
-        >
-          Telegram Bot
-        </TypingText>
-      </div>
-      <div className="centeredContainer">
-        <TypingText
-          className="justtext"
-          styles={{ textAlign: 'center', marginTop: '5%' }}
-          speed={2}
-        >
-          A telegram bot that was made for solving an actual bussiness problem.
-          My parents own a retail shop which has a telegram channel in order to
-          inform people about new products and show them new deals. However,
-          turned out customers quickly forget about the older products after
-          releasing new ones since they pay attention only to them. So we had to
-          somehow constantly remind about availability of previous products.
-          Thats what this bot does, it gets random available products from the
-          configured time span and posts them regularly in the channel so the
-          collection pretty much always stays in the bottom and informs people
-          about older products.
-        </TypingText>
-        <TypingText speed={2} className="Title">
-          Technologies
-        </TypingText>
-        <TypingText speed={2} className="justtext">
-          {description}
-        </TypingText>
-      </div>
-      <div className="rowsContainer">
-        <TechnologyCard
-          image={python}
-          title="Python"
-          onclick={() => handleClick('python')}
-        />
-        <TechnologyCard
-          image={sqlite}
-          title="Telegram Bot API"
-          onclick={() => handleClick('sqlite')}
-        />
-        <TechnologyCard
-          image={aiogram}
-          title="Aiogram"
-          onclick={() => handleClick('aiogram')}
-        />
-        <div style={{marginTop:"5%"}}></div>
-      </div>
+        <div style={{ padding: '5%' }} className="centeredContainer">
+          <Carouselka width={300} images={images} ascii={telega_preview} />
+          <TypingText
+            className="Title"
+            styles={{ margin: '0 auto', display: 'block', marginTop: '5%' }}
+            speed={30}
+          >
+            Telegram Bot
+          </TypingText>
+        </div>
+        <div className="centeredContainer">
+          <TypingText
+            className="justtext"
+            styles={{ textAlign: 'center', marginTop: '5%' }}
+            speed={2}
+          >
+            A telegram bot that was made for solving an actual bussiness
+            problem. My parents own a retail shop which has a telegram channel
+            in order to inform people about new products and show them new
+            deals. However, turned out customers quickly forget about the older
+            products after releasing new ones since they pay attention only to
+            them. So we had to somehow constantly remind about availability of
+            previous products. Thats what this bot does, it gets random
+            available products from the configured time span and posts them
+            regularly in the channel so the collection pretty much always stays
+            in the bottom and informs people about older products.
+          </TypingText>
+          <TypingText speed={2} className="Title">
+            Technologies
+          </TypingText>
+          <TypingText speed={2} className="justtext">
+            {description}
+          </TypingText>
+        </div>
+        <div className="rowsContainer">
+          <TechnologyCard
+            image={python}
+            title="Python"
+            onclick={() => handleClick('python')}
+          />
+          <TechnologyCard
+            image={sqlite}
+            title="Telegram Bot API"
+            onclick={() => handleClick('sqlite')}
+          />
+          <TechnologyCard
+            image={aiogram}
+            title="Aiogram"
+            onclick={() => handleClick('aiogram')}
+          />
+          <div style={{ marginTop: '5%' }}></div>
+        </div>
+        <div className="centeredContainer">
+          <AsciiButton
+            onclick={() => {
+              window.location.href = 'https://github.com/ZizMich/StoriesBot';
+            }}
+            size={20}
+            label="    Github rep   "
+          ></AsciiButton>
+        </div>
       </div>
     </div>
   );

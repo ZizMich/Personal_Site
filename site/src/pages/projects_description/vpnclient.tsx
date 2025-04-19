@@ -21,6 +21,8 @@ import django from '../../assets/technologies/django.png';
 import openvpn from '../../assets/technologies/openvpn.png';
 import { vpn } from '../../assets/asciiarts';
 import { useState } from 'react';
+import { AsciiButton } from '../../components/ascii';
+
 export const Vpn = () => {
   const [description, setDescription] = useState('click on icons!');
   const [BEdescription, setBEdescription] = useState('click on icons!');
@@ -155,7 +157,15 @@ export const Vpn = () => {
           onclick={() => handlePush('css')}
         />
       </div>
-
+      <div className="centeredContainer">
+                <AsciiButton
+                  onclick={() => {
+                    window.location.href = '      https://github.com/ZizMich/VPNClient';
+                  }}
+                  size={20}
+                  label="    Github rep   "
+                ></AsciiButton>
+      </div>
       <div className="centeredContainer">
         <TypingText className="Title" speed={10}>
           Back end
@@ -181,7 +191,8 @@ export const Vpn = () => {
           onclick={() => handlePush('openvpn')}
         />
       </div>
-      </div>
+
+            </div>
     </div>
   );
 };

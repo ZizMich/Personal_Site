@@ -12,6 +12,8 @@ import html from '../../assets/technologies/html.png';
 import css from '../../assets/technologies/css.png';
 import { sonder_preview } from '../../assets/asciiarts';
 import { useState } from 'react';
+import { AsciiButton } from '../../components/ascii';
+
 export const ThisWebsite = () => {
 
   const [description, setDescription] = useState("click on icons!");
@@ -111,7 +113,15 @@ export const ThisWebsite = () => {
           onclick={() => handlePush('css')}
         />
       </div>
-
+        <div className="centeredContainer">
+          <AsciiButton
+            onclick={() => {
+              window.location.href = 'https://github.com/ZizMich/Personal_Site';
+            }}
+            size={20}
+            label="    Github rep   "
+          ></AsciiButton>
+        </div>
       </div>
     </div>
   );
